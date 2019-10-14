@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ViewPager Cards</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+    <string name="raças">Raças
+        Vira-lata         Dachshund
+        Shih-Tzu          Spitz Alemão
+        Yorkshire         Pinscher
+        Poodle            Schnauzer
+        Lhasa Apso        Beagle
+        Buldogue Francês  Cocker Spaniel
+        Maltês            Border Collie
+        Golden Retriever  Buldogue Inglês
+        Labrador          Pit Bull
+        Pug               Chow Chow
+
+
+
+
+
+
+
+
+
+
+
+"</string>
+</resources>
