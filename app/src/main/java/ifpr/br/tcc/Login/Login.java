@@ -37,9 +37,6 @@ public class Login extends AppCompatActivity {
 
     }
 
-
-
-
     public void login(View view) throws IOException, JSONException {
 
         EditText emailLogin = (EditText) findViewById(R.id.emailLogin);

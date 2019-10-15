@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
+import ifpr.br.tcc.Login.DBHelper;
 import ifpr.br.tcc.R;
 
 public class Cadastro extends AppCompatActivity {

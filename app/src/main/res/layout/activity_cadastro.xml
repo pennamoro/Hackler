@@ -70,7 +70,7 @@
         android:paddingLeft="32dp"
         android:paddingRight="32dp">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#96ffffff"
@@ -82,7 +82,6 @@
                 android:id="@+id/nomeCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableRight="@drawable/ic_email_white_24dp"
                 android:drawablePadding="16dp"
                 android:fontFamily="@font/calibri"
                 android:hint="Nome"
@@ -90,8 +89,8 @@
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#96ffffff"
@@ -103,7 +102,6 @@
                 android:id="@+id/idadeCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableRight="@drawable/ic_email_white_24dp"
                 android:drawablePadding="16dp"
                 android:fontFamily="@font/calibri"
                 android:hint="Idade"
@@ -111,8 +109,8 @@
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -120,21 +118,21 @@
             android:theme="@style/EditScreenTextInputLayoutStyle">
 
 
-        <EditText
-            android:id="@+id/emailCadastro"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:drawableRight="@drawable/ic_email_white_24dp"
-            android:drawablePadding="16dp"
-            android:fontFamily="@font/calibri"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
-        </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:id="@+id/emailCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_email_white_24dp"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/calibri"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#96ffffff"
@@ -152,8 +150,8 @@
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#96ffffff"
@@ -163,7 +161,6 @@
                 android:id="@+id/cepCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableRight="@drawable/ic_lock_white_24dp"
                 android:drawablePadding="16dp"
                 android:fontFamily="@font/calibri"
                 android:hint="CEP"
@@ -171,7 +168,7 @@
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -204,4 +201,3 @@
 
 
 </RelativeLayout>
-

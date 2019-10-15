@@ -11,14 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Login.Login"></activity>
+        <activity android:name=".Login.Login" />
         <activity android:name=".Login.Cadastro" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Vacina" />
         <activity android:name=".Cachorro" />
         <activity android:name=".Comida" />
         <activity android:name=".Agua" />
-        <activity android:name=".Login.Splash">
+        <activity
+            android:name=".Login.Splash"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
