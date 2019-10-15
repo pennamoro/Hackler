@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     tools:context=".Login.Cadastro"
-    android:background="@drawable/fundocadastro"
+    android:background="@drawable/blurbg"
     >
     <FrameLayout
         android:layout_width="wrap_content"

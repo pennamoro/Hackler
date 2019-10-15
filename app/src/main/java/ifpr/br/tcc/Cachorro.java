@@ -5,8 +5,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ifpr.br.tcc.R;
-
 public class Cachorro extends AppCompatActivity {
 
     @Override

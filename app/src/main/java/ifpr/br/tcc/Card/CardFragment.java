@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import ifpr.br.tcc.Agua;
 import ifpr.br.tcc.Cachorro;
 import ifpr.br.tcc.Comida;
+import ifpr.br.tcc.MainActivity;
 import ifpr.br.tcc.R;
 import ifpr.br.tcc.Vacina;
 
@@ -98,9 +99,6 @@ public class CardFragment extends Fragment {
                     Intent intentdog = new Intent(getContext(), Comida.class);
                     startActivity(intentdog);
                 }
-
-
-
 
             }
         });
