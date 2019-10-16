@@ -4,6 +4,7 @@ package ifpr.br.tcc.Login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
@@ -19,9 +20,17 @@ import ifpr.br.tcc.MainActivity;
 import ifpr.br.tcc.R;
 
 public class Login extends AppCompatActivity {
-
+    private void enabledFullScreenMode(){
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        enabledFullScreenMode();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
     }
@@ -39,8 +48,8 @@ public class Login extends AppCompatActivity {
 
     public void login(View view) throws IOException, JSONException {
 
-        EditText emailLogin = (EditText) findViewById(R.id.emailLogin);
-        EditText senhaLogin = (EditText) findViewById(R.id.senhaLogin);
+        EditText emailLogin = findViewById(R.id.emailLogin);
+        EditText senhaLogin = findViewById(R.id.senhaLogin);
 
         String emailDigitado = emailLogin.getText().toString();
         String senhaDigitada = senhaLogin.getText().toString();

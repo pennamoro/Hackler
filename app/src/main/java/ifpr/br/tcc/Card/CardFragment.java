@@ -42,13 +42,13 @@ public class CardFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.item_viewpager, container, false);
 
-        cardView = (CardView) view.findViewById(R.id.cardView);
+        cardView = view.findViewById(R.id.cardView);
         cardView.setMaxCardElevation(cardView.getCardElevation() * CardAdapter.MAX_ELEVATION_FACTOR);
 
-        ImageView icone = (ImageView) view.findViewById(R.id.icone);
-        TextView title = (TextView) view.findViewById(R.id.title);
-        TextView text = (TextView) view.findViewById(R.id.text);
-        Button button = (Button)view.findViewById(R.id.button);
+        ImageView icone = view.findViewById(R.id.icone);
+        TextView title = view.findViewById(R.id.title);
+        TextView text = view.findViewById(R.id.text);
+        Button button = view.findViewById(R.id.button);
 
         if (getArguments().getInt("position" ) == 0 ) {
             title.setText(String.format("Dog"));

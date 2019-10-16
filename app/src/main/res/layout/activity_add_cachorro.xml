@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    tools:context=".Login.Login"
-    android:background="@drawable/background"
+    tools:context=".Login.Cadastro"
+    android:background="@drawable/blurbg"
     >
     <FrameLayout
         android:layout_width="wrap_content"
@@ -16,8 +16,6 @@
 
 
     <LinearLayout
-
-
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,8 +25,6 @@
         android:orientation="horizontal">
 
         <LinearLayout
-
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -37,28 +33,21 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/icone"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="25dp"
-                app:srcCompat="@drawable/dog"
-                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
                 android:fontFamily="@font/gotham"
-                android:text="Pettio"
-                android:textColor="#FFFFFF"
-                android:textSize="35sp" />
+                android:text="Adicione um cachorro"
+                android:textColor="#ffffff"
+                android:textSize="32sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -66,24 +55,28 @@
                 android:layout_marginTop="2dp"
                 android:background="@color/colorPrimaryDark" />
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/calibri"
+                android:text="Escolha um icone para seu cachorro" />
 
+            <ImageView
+                android:id="@+id/icone"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                app:srcCompat="@drawable/dog"
+                android:contentDescription="TODO" />
         </LinearLayout>
 
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/texto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/calibri"
-        android:gravity="center"
-        android:text="Faça seu login ou cadastre-se"
-        android:textColor="#9affffff"
-        android:textSize="15sp" />
 
 
     <LinearLayout
@@ -96,9 +89,46 @@
         android:paddingLeft="32dp"
         android:paddingRight="32dp">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#96ffffff"
+            android:theme="@style/EditScreenTextInputLayoutStyle">
 
 
+            <EditText
 
+                android:id="@+id/nomeCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/calibri"
+                android:hint="Nome"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#96ffffff"
+            android:theme="@style/EditScreenTextInputLayoutStyle">
+
+
+            <EditText
+
+                android:id="@+id/idadeCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/calibri"
+                android:hint="Idade"
+                android:inputType="text|number"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,20 +136,18 @@
             android:theme="@style/EditScreenTextInputLayoutStyle">
 
             <EditText
-                android:id="@+id/emailLogin"
+                android:id="@+id/pesoCachorro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableRight="@drawable/ic_email_white_24dp"
                 android:drawablePadding="16dp"
                 android:fontFamily="@font/calibri"
-                android:hint="E-mail"
-                android:inputType="textEmailAddress"
+                android:hint="Peso"
+                android:inputType="textPassword"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,14 +155,32 @@
             android:theme="@style/EditScreenTextInputLayoutStyle">
 
             <EditText
-                android:id="@+id/senhaLogin"
+                android:id="@+id/senhaCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableRight="@drawable/ic_lock_white_24dp"
                 android:drawablePadding="16dp"
                 android:fontFamily="@font/calibri"
-                android:hint="Senha"
+                android:hint="Altura"
                 android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#96ffffff"
+            android:theme="@style/EditScreenTextInputLayoutStyle">
+
+            <EditText
+                android:id="@+id/cepCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/calibri"
+                android:hint="Raça"
+                android:inputType="textPersonName"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
@@ -155,25 +201,13 @@
                 android:layout_marginRight="16dp"
                 android:background="@drawable/buttonshapewhitebg"
                 android:fontFamily="@font/calibri"
-                android:text="Cadastrar"
-                android:onClick="onClick"
+                android:text="Adicionar"
+                android:onClick="cadastrarUsuario"
                 android:textAllCaps="false"
                 android:textColor="#96ffffff"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:background="@drawable/buttonshapewhitebg"
-                android:fontFamily="@font/calibri"
-                android:onClick="onClickLogin"
-                android:text="Login"
-                android:textAllCaps="false"
-                android:textColor="#96ffffff"
-                android:textSize="16dp"
-                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -183,7 +217,3 @@
 
 
 </RelativeLayout>
-
-
-
-

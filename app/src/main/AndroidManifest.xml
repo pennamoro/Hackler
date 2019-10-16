@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".AddCachorro"></activity>
         <activity android:name=".Login.Login" />
         <activity android:name=".Login.Cadastro" />
         <activity android:name=".MainActivity" />

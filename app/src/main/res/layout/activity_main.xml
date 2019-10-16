@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="top|center"
         android:layout_marginTop="50dp"
         android:src="@drawable/dog" />

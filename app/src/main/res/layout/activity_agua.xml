@@ -5,12 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Agua"
+    tools:context="Agua"
     android:background="@color/colorPrimary"
     >
-
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
