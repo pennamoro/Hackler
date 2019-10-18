@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
-import ifpr.br.tcc.Login.DBHelper;
 import ifpr.br.tcc.R;
 
 public class Cadastro extends AppCompatActivity {
@@ -32,19 +31,19 @@ public class Cadastro extends AppCompatActivity {
 
     public void cadastrarUsuario(View view) throws IOException {
 
-        EditText nomeCadastro = findViewById(R.id.nomeCadastro);
+        EditText nomeCadastro = findViewById(R.id.nomeCadastroCachorro);
         String nome = nomeCadastro.getText().toString();
 
-        EditText idadeCadastro = findViewById(R.id.idadeCadastro);
+        EditText idadeCadastro = findViewById(R.id.idadeCadastroCachorro);
         String idade = idadeCadastro.getText().toString();
 
         EditText emailCadastro = findViewById(R.id.emailCadastro);
         String email = emailCadastro.getText().toString();
 
-        EditText senhaCadastro = findViewById(R.id.senhaCadastro);
+        EditText senhaCadastro = findViewById(R.id.alturaCadastroCachorro);
         String senha = senhaCadastro.getText().toString();
 
-        EditText cepCadastro = findViewById(R.id.cepCadastro);
+        EditText cepCadastro = findViewById(R.id.racaCadastroCachorro);
         String cep = cepCadastro.getText().toString();
 
 

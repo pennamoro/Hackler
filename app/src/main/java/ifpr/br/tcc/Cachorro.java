@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import java.io.IOError;
+import java.io.IOException;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Cachorro extends AppCompatActivity {
@@ -22,4 +25,8 @@ public class Cachorro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cachorro);
     }
+
+
+
+
 }
