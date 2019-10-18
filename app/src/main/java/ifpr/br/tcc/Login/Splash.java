@@ -27,16 +27,17 @@ public class Splash extends AppCompatActivity {
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-       enabledFullScreenMode();
+        enabledFullScreenMode();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
                 Intent homeIntent = new Intent(Splash.this, Login.class);
                 startActivity(homeIntent);
             }
 
-        },SPLASH_TIME_OUT);
+        }, SPLASH_TIME_OUT);
     }
+
 }
