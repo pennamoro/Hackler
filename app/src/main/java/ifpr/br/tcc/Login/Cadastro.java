@@ -35,20 +35,20 @@ public class Cadastro extends AppCompatActivity {
         EditText nomeCadastro = findViewById(R.id.nomeCadastro);
         String nome = nomeCadastro.getText().toString();
 
-        EditText idadeCadastro = findViewById(R.id.senhaCadastro);
+        EditText idadeCadastro = findViewById(R.id.idadeCadastro);
         String idade = idadeCadastro.getText().toString();
 
         EditText emailCadastro = findViewById(R.id.emailCadastro);
         String email = emailCadastro.getText().toString();
 
-        EditText senhaCadastro = findViewById(R.id.emailCadastro);
+        EditText senhaCadastro = findViewById(R.id.senhaCadastro);
         String senha = senhaCadastro.getText().toString();
 
-        EditText cepCadastro = findViewById(R.id.emailCadastro);
+        EditText cepCadastro = findViewById(R.id.cepCadastro);
         String cep = cepCadastro.getText().toString();
 
 
-        int resposta = DBHelper.insertIntoUsuario(nome, idade,email,senha, cep);
+        int resposta = DBHelper.insertIntoDono(nome, idade, email, senha, cep);
 
         if(resposta ==  1){
             Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();

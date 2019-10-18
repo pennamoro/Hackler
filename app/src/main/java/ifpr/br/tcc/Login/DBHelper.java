@@ -15,7 +15,7 @@ import java.net.URL;
 
 public class DBHelper {
 
-    private static String WEB_SERVICE_URL = "http://192.168.0.105/web_service/";
+    private static String WEB_SERVICE_URL = "http://192.168.0.8/web_service/";
 
     private static void checkThreadPolicy(){
             int version = Build.VERSION.SDK_INT;
@@ -25,11 +25,11 @@ public class DBHelper {
             }
     }
 
-    public static int insertIntoUsuario(String nome,String idade, String email, String senha, String cep) throws IOException {
+    public static int insertIntoDono(String nome,String idade, String email, String senha, String cep) throws IOException {
         checkThreadPolicy();
 
         String values = "email=" + email + "&senha=" + senha + "&idade=" + idade + "&nome=" + nome + "&cep=" + cep;
-        URL url = new URL(WEB_SERVICE_URL + "ws_insert/ws_insert_usuarios.php?" + values);
+        URL url = new URL(WEB_SERVICE_URL + "ws_insert/ws_insert_dono.php?" + values);
         HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
         BufferedReader br = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
         String resposta = br.readLine();
@@ -42,7 +42,7 @@ public class DBHelper {
 
     public static JSONArray selectAllFromUsuarios() throws IOException, JSONException {
         checkThreadPolicy();
-        URL url = new URL(WEB_SERVICE_URL + "ws_read/ws_read_usuarios.php?");
+        URL url = new URL(WEB_SERVICE_URL + "ws_read/ws_read_dono.php?");
         HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
         BufferedReader br = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
         StringBuilder sb = new StringBuilder();

@@ -14,11 +14,14 @@ import ifpr.br.tcc.R;
 public class Splash extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 3000;
+
     private void enabledFullScreenMode(){
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         View decorView = getWindow().getDecorView();
+
         // Hide the status bar.
+
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
     }

@@ -40,11 +40,7 @@ public class Login extends AppCompatActivity {
     startActivity(cadastro);
 
     }
-    public void onClickLogin (View view) {
-        Intent cadastro = new Intent(this, MainActivity.class);
-        startActivity(cadastro);
 
-    }
 
     public void login(View view) throws IOException, JSONException {
 
