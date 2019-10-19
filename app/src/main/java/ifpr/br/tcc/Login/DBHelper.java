@@ -28,7 +28,7 @@ public class DBHelper {
     public static int insertIntoDono(String nome,String idade, String email, String senha, String cep) throws IOException {
         checkThreadPolicy();
 
-        String values = "email=" + email + "&senha=" + senha + "&idade=" + idade + "&nome=" + nome + "&cep=" + cep;
+        String values = "nome=" + nome + "&idade=" + idade + "&email=" + email + "&senha=" + senha + "&cep=" + cep;
         URL url = new URL(WEB_SERVICE_URL + "ws_insert/ws_insert_dono.php?" + values);
         HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
         BufferedReader br = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
