@@ -66,7 +66,4 @@ public class Cadastro extends AppCompatActivity {
                 startActivity(naoAddCachorro);
         }
     }
-
-    public void cadastrarCachorro(View view) {
-    }
 }
