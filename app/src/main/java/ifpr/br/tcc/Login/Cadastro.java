@@ -1,6 +1,7 @@
 package ifpr.br.tcc.Login;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
+import ifpr.br.tcc.Cachorro;
 import ifpr.br.tcc.Login.DBHelper;
 import ifpr.br.tcc.R;
 
@@ -52,9 +54,19 @@ public class Cadastro extends AppCompatActivity {
 
         if(resposta ==  1){
             Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                Intent addCachorro = new Intent(this, Cachorro.class);
+                startActivity(addCachorro);
         }
+
         if(resposta == 0){
             Toast.makeText(this, "Cadastro falhou!", Toast.LENGTH_SHORT).show();
+
+                Intent naoAddCachorro = new Intent(this, Cachorro.class);
+                startActivity(naoAddCachorro);
         }
+    }
+
+    public void cadastrarCachorro(View view) {
     }
 }
