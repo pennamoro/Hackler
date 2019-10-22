@@ -215,13 +215,21 @@
                     </androidx.cardview.widget.CardView>
 
 
-                    <!-- Row 2 -->
-
-                    <!-- Column 1 -->
-
-                    <!-- Column 2 -->
 
                 </GridLayout>
+                <Button
+                    android:id="@+id/botaoCadastrarCachorro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshapewhitebg"
+                    android:fontFamily="@font/calibri"
+                    android:onClick="irCadastrarCachorro"
+                    android:text="Adicionar Cachorro"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="#96ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

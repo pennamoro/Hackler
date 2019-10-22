@@ -3,10 +3,12 @@ package ifpr.br.tcc;
 import androidx.appcompat.app.AppCompatActivity;
 import ifpr.br.tcc.Login.DBHelper;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -26,30 +28,39 @@ public class AddCachorro extends AppCompatActivity {
         setContentView(R.layout.activity_add_cachorro);
     }
 
+    public void cadastrarCachorro(View view) throws IOException {
 
-    //Método que adiciona um novo cachorro
-    // nome,idade,peso,altura,raça
-  /*  public void cadastrarCachorro(View view) throws IOException{
-
-        EditText nomeCadastroCachorro = (EditText) findViewById(R.id.nomeCadastroCachorro);
+        EditText nomeCadastroCachorro = findViewById(R.id.nomeCadastroCachorro);
         String nomeCachorro = nomeCadastroCachorro.getText().toString();
 
-        EditText idadeCadastroCachorro = (EditText) findViewById(R.id.idadeCadastroCachorro);
+        EditText idadeCadastroCachorro = findViewById(R.id.idadeCadastroCachorro);
         String idadeCachorro = idadeCadastroCachorro.getText().toString();
 
-        EditText pesoCadastroCachorro = (EditText) findViewById(R.id.pesoCadastroCachorro);
+        EditText pesoCadastroCachorro = findViewById(R.id.pesoCadastroCachorro);
         String pesoCachorro = pesoCadastroCachorro.getText().toString();
 
-        EditText alturaCadastroCachorro = (EditText) findViewById(R.id.alturaCadastroCachorro);
+        EditText alturaCadastroCachorro = findViewById(R.id.alturaCadastroCachorro);
         String alturaCachorro = alturaCadastroCachorro.getText().toString();
 
-        EditText racaCadastroCachorro = (EditText) findViewById(R.id.racaCadastroCachorro);
-        String racaCachorro = racaCadastroCachorro.getText().toString();
-
-        int resposta = DBHelper.insertIntoCachorro(id,dono_email, nome, idade, porte, raca);
+        EditText racaCadastroCachorro = findViewById(R.id.racaCadastroCachorro);
+        String racaCadastro = racaCadastroCachorro.getText().toString();
 
 
+       int resposta = DBHelper.insertIntoCachorro(nomeCachorro, idadeCachorro, pesoCachorro, alturaCachorro, racaCadastro);
 
+        if(resposta ==  1){
+            Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+
+            Intent addCachorro = new Intent(this, Cachorro.class);
+            startActivity(addCachorro);
+        }
+
+        if(resposta == 0){
+            Toast.makeText(this, "Cadastro falhou!", Toast.LENGTH_SHORT).show();
+
+            Intent naoAddCachorro = new Intent(this, Cachorro.class);
+            startActivity(naoAddCachorro);
+        }
     }
-*/
+
 }

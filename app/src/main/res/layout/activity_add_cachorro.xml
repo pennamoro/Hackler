@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    tools:context=".Login.Cadastro"
+    tools:context="AddCachorro"
     android:background="@drawable/blurbg"
     >
     <FrameLayout
@@ -195,14 +195,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/cadastrar"
+                android:id="@+id/botaoCadastrarCachorro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:background="@drawable/buttonshapewhitebg"
                 android:fontFamily="@font/calibri"
+                android:onClick="cadastrarCachorro"
                 android:text="Adicionar"
-                android:onClick="cadastrarUsuario"
                 android:textAllCaps="false"
                 android:textColor="#96ffffff"
                 android:textSize="16dp"

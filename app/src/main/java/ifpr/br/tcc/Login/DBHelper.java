@@ -28,7 +28,7 @@ public class DBHelper {
     public static int insertIntoDono(String nome,String idade, String email, String senha, String cep) throws IOException {
         checkThreadPolicy();
 
-        String values = "email=" + email + "&senha=" + senha + "&idade=" + idade + "&nome=" + nome + "&cep=" + cep;
+        String values = "nome=" + nome + "&idade=" + idade + "&email=" + email + "&senha=" + senha + "&cep=" + cep;
         URL url = new URL(WEB_SERVICE_URL + "ws_insert/ws_insert_dono.php?" + values);
         HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
         BufferedReader br = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
@@ -38,7 +38,30 @@ public class DBHelper {
             } else {
                 return 0;
             }
+
+
+
     }
+
+    public static int insertIntoCachorro(String nome,String idade, String peso, String altura, String raca) throws IOException {
+        checkThreadPolicy();
+
+        String values = "nome=" + nome + "&idade=" + idade + "&peso=" + peso + "&altura=" + altura + "&raca=" + raca;
+        URL url = new URL(WEB_SERVICE_URL + "ws_insert/ws_insert_cachorro.php?" + values);
+        HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
+        BufferedReader br = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
+        String resposta = br.readLine();
+        if (resposta.equals("true")) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+
+
+    }
+
+
 
     public static JSONArray selectAllFromUsuarios() throws IOException, JSONException {
         checkThreadPolicy();

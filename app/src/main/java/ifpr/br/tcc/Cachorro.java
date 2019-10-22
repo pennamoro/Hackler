@@ -1,6 +1,7 @@
 package ifpr.br.tcc;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,7 +27,10 @@ public class Cachorro extends AppCompatActivity {
         setContentView(R.layout.activity_cachorro);
     }
 
-
+public void irCadastrarCachorro(View view){
+    Intent cachorrofds = new Intent(Cachorro.this, AddCachorro.class );
+    startActivity(cachorrofds);
+}
 
 
 }
