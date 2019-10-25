@@ -45,14 +45,39 @@ public class AddCachorro extends AppCompatActivity {
         EditText racaCadastroCachorro = findViewById(R.id.racaCadastroCachorro);
         String racaCadastro = racaCadastroCachorro.getText().toString();
 
+        EditText peso = findViewById(R.id.pesoCadastroCachorro);
+        String pesoString = pesoCadastroCachorro.getText().toString();
+        Double pesoDouble = Double.parseDouble(pesoString);
 
-       int resposta = DBHelper.insertIntoCachorro(nomeCachorro, idadeCachorro, pesoCachorro, alturaCachorro, racaCadastro);
+        EditText altura = findViewById(R.id.alturaCadastroCachorro);
+        String alturaString = alturaCadastroCachorro.getText().toString();
+        Double alturaDouble = Double.parseDouble(alturaString);
+
+        String porte = "";
+        if(pesoDouble < 6 && alturaDouble <= 33){
+            porte = "Mini";
+        } else if(pesoDouble >= 6  && pesoDouble < 15 && alturaDouble > 33 && alturaDouble <= 43  ){
+            porte = "Pequeno";
+        } else if(pesoDouble >= 15 && pesoDouble < 25 && alturaDouble > 43 && alturaDouble <= 60){
+            porte = "Médio";
+        } else if(pesoDouble >= 25 && pesoDouble < 45 && alturaDouble > 60 && alturaDouble <= 70){
+            porte = "Grande";
+        } else if(pesoDouble >= 45 && pesoDouble < 90 && alturaDouble > 70){
+            porte = "Gigante";
+        }
+        Bundle porteBundle = new Bundle();
+        porteBundle.putString("porte", porte );
+
+
+        int resposta = DBHelper.insertIntoCachorro(nomeCachorro, idadeCachorro, pesoCachorro, alturaCachorro, racaCadastro);
 
         if(resposta ==  1){
             Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
 
             Intent addCachorro = new Intent(this, Cachorro.class);
+            addCachorro.putExtras(porteBundle);
             startActivity(addCachorro);
+
         }
 
         if(resposta == 0){
@@ -62,5 +87,7 @@ public class AddCachorro extends AppCompatActivity {
             startActivity(naoAddCachorro);
         }
     }
+
+
 
 }

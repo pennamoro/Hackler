@@ -27,7 +27,11 @@ public class Cachorro extends AppCompatActivity {
         setContentView(R.layout.activity_cachorro);
     }
 
-public void irCadastrarCachorro(View view){
+    Intent addCachorro = getIntent();
+    Bundle porteBundle = addCachorro.getExtras();
+    String porte = porteBundle.getString("porte");
+
+    public void irCadastrarCachorro(View view){
     Intent cachorrofds = new Intent(Cachorro.this, AddCachorro.class );
     startActivity(cachorrofds);
 }
