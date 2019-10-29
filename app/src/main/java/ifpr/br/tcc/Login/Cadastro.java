@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
-import ifpr.br.tcc.Cachorro;
 import ifpr.br.tcc.R;
 
 public class Cadastro extends AppCompatActivity {
@@ -29,7 +28,7 @@ public class Cadastro extends AppCompatActivity {
         EditText nomeCadastro = findViewById(R.id.nomeCadastroCachorro);
         String nome = nomeCadastro.getText().toString();
 
-        EditText idadeCadastro = findViewById(R.id.idadeCadastroCachorro);
+        EditText idadeCadastro = findViewById(R.id.idadeCadastro);
         String idade = idadeCadastro.getText().toString();
 
         EditText emailCadastro = findViewById(R.id.emailCadastro);
@@ -47,15 +46,15 @@ public class Cadastro extends AppCompatActivity {
         if(resposta ==  1){
             Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
 
-            Intent addCachorro = new Intent(this, Cachorro.class);
-            startActivity(addCachorro);
+            Intent addUsuario = new Intent(this, Login.class);
+            startActivity(addUsuario);
         }
 
         if(resposta == 0){
             Toast.makeText(this, "Cadastro falhou!", Toast.LENGTH_SHORT).show();
 
-            Intent naoAddCachorro = new Intent(this, Cachorro.class);
-            startActivity(naoAddCachorro);
+            Intent naoAddUsuario = new Intent(this, Login.class);
+            startActivity(naoAddUsuario);
         }
     }
 

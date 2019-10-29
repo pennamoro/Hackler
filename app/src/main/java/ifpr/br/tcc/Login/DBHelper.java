@@ -15,7 +15,7 @@ import java.net.URL;
 
 public class DBHelper {
 
-    private static String WEB_SERVICE_URL = "http://192.168.137.1/web_service/";
+    private static String WEB_SERVICE_URL = "http://10.21.80.198/web_service/";
 
     private static void checkThreadPolicy(){
             int version = Build.VERSION.SDK_INT;
