@@ -48,6 +48,7 @@
 
             <!-- Column 1 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardview1"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -87,9 +88,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/calibri"
-                        android:layout_gravity="center"
                         android:text="13/01"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
@@ -102,6 +103,7 @@
 
             <!-- Column 2 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardview2"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -141,9 +143,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/calibri"
-                        android:layout_gravity="center"
                         android:text="07/02"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
@@ -159,6 +161,7 @@
 
             <!-- Column 1 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardview3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -186,8 +189,8 @@
                         android:id="@+id/vacina3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/calibri"
                         android:text="Anti-Rábica"
                         android:textAlignment="center"
@@ -198,9 +201,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/calibri"
-                        android:layout_gravity="center"
                         android:text="15/11"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
@@ -213,6 +216,7 @@
 
             <!-- Column 2 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardview4"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -237,22 +241,22 @@
                         android:src="@drawable/leishmaniose" />
 
                     <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/calibri"
-                    android:text="Leishmaniose"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="Leishmaniose"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/calibri"
-                        android:layout_gravity="center"
                         android:text="22/11"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
