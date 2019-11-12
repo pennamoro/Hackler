@@ -278,6 +278,7 @@
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
+            android:onClick="addVacina"
             android:background="@null"
             app:srcCompat="@drawable/plus"
             />

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import ifpr.br.tcc.Login.Cadastro;
 
 public class Vacina extends AppCompatActivity {
 
@@ -19,5 +20,9 @@ public class Vacina extends AppCompatActivity {
         startActivity(vacinafds);
 
     }
+    public void addVacina(View view) {
+        Intent addVacina = new Intent(this, AddVacina.class);
+        startActivity(addVacina);
 
+    }
 }

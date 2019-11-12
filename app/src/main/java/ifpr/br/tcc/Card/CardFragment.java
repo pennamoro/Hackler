@@ -74,11 +74,6 @@ public class CardFragment extends Fragment {
             icone.setImageResource(R.drawable.comida);
             button.setText(String.format("Comida"));
         }
-        /*else if (getArguments().getInt("position" ) == 4 ) {
-            title.setText(String.format("Configurações"));
-            text.setText (String.format("Configurações do app"));
-            icone.setImageResource(R.drawable.config);
-        }*/
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

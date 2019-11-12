@@ -24,4 +24,18 @@
 
 
 "</string>
+    <string name="nada">
+        nada
+    </string>
+<string-array name="vacinas">
+    <item name="V8">V8</item>
+    <item name="V10">V10</item>
+    <item name="V12">V12</item>
+    <item name="Gripe Canina">Gripe Canina</item>
+    <item name="Giárdia">Giárdia</item>
+    <item name="Antirrábica">Antirrábica</item>
+    <item name="Leishmaniose">Leishmaniose</item>
+</string-array>
+
+
 </resources>
