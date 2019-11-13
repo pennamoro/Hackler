@@ -1,20 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimary"
-    >
+    android:fitsSystemWindows="true">
 
 
     <ImageView
-        android:id="@+id/imagem"
+        android:id="@+id/imagem_comida"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_gravity="top|center"
-        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:contentDescription="@string/nada"
         android:src="@drawable/comida" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView
+        android:id="@+id/text_comida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        android:fontFamily="@font/gotham"
+        android:text="Comida"
+        android:textColor="#ffff"
+        android:textSize="60sp"/>
+    <View
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:background="#f26f6f" />
+
+    <TextView
+        android:id="@+id/text_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/gotham"
+        android:text="Inicie um temporizador para não se esquecer dar a comida ao seu pet"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_view_contagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/gotham"
+        android:text="00:00"
+        android:textColor="#f26f6f"
+        android:textSize="60sp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/botao_iniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="415dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshapedrosebg"
+        android:fontFamily="@font/calibri"
+        android:text="Iniciar"
+        android:textAllCaps="false"
+        android:textColor="#f26f6f"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/botao_resetar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshapedrosebg"
+        android:fontFamily="@font/calibri"
+        android:text="Resetar"
+        android:textAllCaps="false"
+        android:textColor="#f26f6f"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="415dp"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@+id/botao_iniciar"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        />
+
+
+    <ImageButton
+        android:id="@+id/botao_informacoes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:scaleType="fitCenter"
+        android:onClick="informacoes"
+        android:background="@null"
+        app:srcCompat="@drawable/information" />
+
+
+
+</RelativeLayout>
