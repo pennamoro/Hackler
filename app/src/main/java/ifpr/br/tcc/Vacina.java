@@ -15,14 +15,6 @@ public class Vacina extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacina);
     }
-    public void irAdicionarVacina(View view){
-        Intent vacinafds = new Intent(Vacina.this, AddVacina.class );
-        startActivity(vacinafds);
 
-    }
-    public void addVacina(View view) {
-        Intent addVacina = new Intent(this, AddVacina.class);
-        startActivity(addVacina);
 
-    }
 }
