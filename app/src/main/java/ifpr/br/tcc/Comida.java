@@ -1,7 +1,11 @@
 package ifpr.br.tcc;
 
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -12,11 +16,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import java.util.Locale;
 
 public class Comida extends AppCompatActivity {
-    private static final long START_TIME_IN_MILLIS = 5000; //8horas
+    private static final long START_TIME_IN_MILLIS = 28800000; //Oito em Oito Horas
 
     private ImageButton mButtonInformacoes;
 
@@ -45,6 +50,7 @@ public class Comida extends AppCompatActivity {
             public void onFinish() {
                 resetTimer();
                 startTimer();
+                Notificação();
                 Toast.makeText(getApplicationContext(),"zap", Toast.LENGTH_SHORT).show();
             }
         }.start();
@@ -53,6 +59,25 @@ public class Comida extends AppCompatActivity {
     private void resetTimer() {
         mContagem.cancel();
         mTempoRestanteEmMillis = START_TIME_IN_MILLIS;
+    }
+
+    private void Notificação(){
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O) {
+            NotificationChannel channel =
+                    new NotificationChannel("LembreteComida" ,"lembreteComida" ,
+                            NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager nm = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+            nm.createNotificationChannel(channel);}
+
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"Lembrete");
+        builder.setSmallIcon(R.drawable.comida);
+        builder.setContentTitle("Não vá deixa-lo com fome em!");
+        builder.setContentText("Não esqueça de dar comida ao seu pet :)");
+        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        NotificationManager nm = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.notify(3566, builder.build());
     }
 
 }

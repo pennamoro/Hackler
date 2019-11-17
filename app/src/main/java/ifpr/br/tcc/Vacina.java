@@ -16,5 +16,8 @@ public class Vacina extends AppCompatActivity {
         setContentView(R.layout.activity_vacina);
     }
 
-
+public void addVacina (View view){
+        Intent irAddVacina = new Intent(Vacina.this, AddVacina.class);
+        startActivity(irAddVacina);
+}
 }
