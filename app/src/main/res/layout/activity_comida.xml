@@ -42,55 +42,9 @@
         android:layout_marginTop="270dp"
         android:textAlignment="center"
         android:fontFamily="@font/gotham"
-        android:text="Inicie um temporizador para não se esquecer dar a comida ao seu pet"
+        android:text="Informações"
         android:textColor="#ffffff"
         android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/text_view_contagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:fontFamily="@font/gotham"
-        android:text="00:00"
-        android:textColor="#f26f6f"
-        android:textSize="60sp">
-
-    </TextView>
-
-    <Button
-        android:id="@+id/botao_iniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="415dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/buttonshapedrosebg"
-        android:fontFamily="@font/calibri"
-        android:text="Iniciar"
-        android:textAllCaps="false"
-        android:textColor="#f26f6f"
-        android:textSize="16dp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/botao_resetar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonshapedrosebg"
-        android:fontFamily="@font/calibri"
-        android:text="Resetar"
-        android:textAllCaps="false"
-        android:textColor="#f26f6f"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="415dp"
-        android:layout_marginLeft="11dp"
-        android:layout_toRightOf="@+id/botao_iniciar"
-        android:visibility="invisible"
-        tools:visibility="visible"
-        />
 
 
     <ImageButton

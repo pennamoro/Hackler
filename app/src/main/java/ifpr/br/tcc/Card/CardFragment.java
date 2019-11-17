@@ -79,20 +79,22 @@ public class CardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (getArguments().getInt("position" ) == 0 ) {
-                    Intent intentdog = new Intent(getContext(), Cachorro.class);
-                    startActivity(intentdog);
+                    Intent intentDog = new Intent(getContext(), Cachorro.class);
+                    startActivity(intentDog);
+
                 }
                 else if (getArguments().getInt("position" ) == 1) {
-                    Intent intentdog = new Intent(getContext(), Vacina.class);
-                    startActivity(intentdog);
+                    Intent intentVacina = new Intent(getContext(), Vacina.class);
+                    startActivity(intentVacina);
                 }
                 else if (getArguments().getInt("position" ) == 2 ) {
-                    Intent intentdog = new Intent(getContext(), Agua.class);
-                    startActivity(intentdog);
+                    Intent intentAgua = new Intent(getContext(), Agua.class);
+                    startActivity(intentAgua);
                 }
                 else if (getArguments().getInt("position" ) == 3) {
-                    Intent intentdog = new Intent(getContext(), Comida.class);
-                    startActivity(intentdog);
+                    Intent intentComida = new Intent(getContext(), Comida.class);
+                    startActivity(intentComida);
+
                 }
 
             }

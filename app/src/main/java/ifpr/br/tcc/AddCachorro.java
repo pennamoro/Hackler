@@ -1,8 +1,10 @@
 package ifpr.br.tcc;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import ifpr.br.tcc.Login.DBHelper;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,16 @@ public class AddCachorro extends AppCompatActivity {
         setContentView(R.layout.activity_add_cachorro);
     }
 
+    public void onInfoClick(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Altura");
+        builder.setMessage("Para medir a altura do seu cachorro encoste-o em uma parede em pé, com as quatro patas. Com um lápis faça uma marquinha na parede, na altura onde acaba o pescoço do cão e começa o corpo (= cernelha).Veja em cm dessa marca até o chão quanto mede - essa é a altura do seu cão.");
+        DialogInterface.OnClickListener btnSim = new DialogInterface.OnClickListener() {
+            @Override public void onClick(DialogInterface dialog, int which) {
+                 }};
+        builder.setNeutralButton("Entendi", btnSim);
+        builder.create().show();
+    }
     public void cadastrarCachorro(View view) throws IOException {
 
         EditText nomeCadastroCachorro = findViewById(R.id.nomeCadastroCachorro);
