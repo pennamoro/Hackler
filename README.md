@@ -1,1 +1,3 @@
-# Jogo em Java Android / SQL, PHP realizado como Trabalho de Conclusão do Curso de Informática do Instituto Federal do Paraná
+# Hackler -  A Simple Mobile Game made to teach algorithms 
+Simple Game made in Java Android , SQL and PHP to teach programing paradigms and basic terms made as a course completion work for the Computing Technical High School from IFPR (Instituto Federal do Paraná)
+
